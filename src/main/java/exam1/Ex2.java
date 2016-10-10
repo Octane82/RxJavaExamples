@@ -53,10 +53,6 @@ public class Ex2 {
     }
 
 
-    /**
-     * https://habrahabr.ru/post/265583/ - GROKAEM 2
-     */
-
 
 }
 

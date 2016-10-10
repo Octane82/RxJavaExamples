@@ -38,6 +38,15 @@ public class Ex1 {
             System.out.println(s);
         });
 
+
+        Observable.create(s ->
+            {
+                s.onNext("Hello everybody");
+                s.onCompleted();
+            })
+                .subscribe(s -> System.out.println(s));
+
+
     }
 
 
