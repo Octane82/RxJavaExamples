@@ -114,8 +114,6 @@ public class Ex3 {
     }
 
 
-    /**
-     * GROKAEm part 3  - https://habrahabr.ru/post/265727/
-     */
+
 
 }

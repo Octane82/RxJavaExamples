@@ -3,6 +3,7 @@ package exam1;
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
+import rx.functions.Func1;
 
 
 /**
@@ -46,6 +47,12 @@ public class Ex1 {
             })
                 .subscribe(s -> System.out.println(s));
 
+
+
+        // ********************
+        getMyObservable()
+                .map(s -> s + "YAY")
+                .subscribe(s-> System.out.println(s));
 
     }
 
@@ -92,6 +99,23 @@ public class Ex1 {
            System.out.println(s);
        }
    };
+
+
+    /**
+     * Метод отдаёт Observable
+     * @return
+     */
+    Observable<String> getMyObservable() {
+        // return Observable.just("1) Generate observable string from METHOD: ");
+
+        // ИЛИ
+
+        return Observable.create(subscriber -> {
+            subscriber.onNext("2) Generate observable string from METHOD:");
+            subscriber.onCompleted();
+        });
+    }
+
 
 
 
