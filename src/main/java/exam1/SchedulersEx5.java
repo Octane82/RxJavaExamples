@@ -58,7 +58,7 @@ public class SchedulersEx5 {
     }
 
 
-    // https://habrahabr.ru/post/265997/ - GROKAEM Rx 4  - pro android !
+    // https://habrahabr.ru/post/265997/ - GROKAEM Rx 4  - pro android ! (rxBindings - биндит UI в андроиде на Rx)
 
     /**
      * ПРЕОБРАЗОВАНИЕ СТАРОГО МЕТОДА В Observable
