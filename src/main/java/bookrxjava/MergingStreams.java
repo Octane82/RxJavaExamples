@@ -7,13 +7,13 @@ import rx.Observable;
  *
  *
  */
-public class Ex1 {
+public class MergingStreams {
 
 
     public static void main(String[] args) {
         // new Ex1().exampeOne();
 
-        new Ex1().mergingStream();
+        new MergingStreams().mergingStream();
 
         // Существуют также !!!!
         // Single<String> si =
