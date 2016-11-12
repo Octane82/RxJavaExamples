@@ -66,7 +66,45 @@ public class AdvancedOperators {
         // distinctUntilChanged -
 
 
-        // 94/120
+        // take, skip - взять и пропустить некоторые значения
+        System.out.println("\nTake");
+        Observable.range(1, 5).take(3).subscribe(i -> System.out.print(i + " "));
+        System.out.println("\nSkip");
+        Observable.range(1, 5).skip(3).subscribe(i -> System.out.print(i + " "));
+        System.out.println("\nSkip");
+        Observable.range(1, 5).skip(5).subscribe(i -> System.out.print(i + " "));
+
+        // takeLast, skipLast - взять и пропустить некоторые последние значения
+        System.out.println("\nTake last");
+        Observable.range(1, 5).takeLast(2).subscribe(i -> System.out.print(i + " "));
+        System.out.println("\nSkip last");
+        Observable.range(1, 5).skip(2).subscribe(i -> System.out.print(i + " "));
+
+
+        // first, last, takeFirst(predicate)
+        //Observable.range(1, 5).first()
+
+
+        // takeUntil, takeWhile
+        Observable.range(1, 5).takeUntil(x -> x == 3);      // [1, 2, 3]
+        Observable.range(1, 5).takeWhile(x -> x != 3);      // [1, 2]
+
+
+        // elementAt - взять элемент по индексу
+        System.out.println("\n*********************************");
+        Observable.range(1, 5).elementAt(2).subscribe(i -> System.out.println(i));
+
+        // ...orDefault
+
+        // count - подсчитывает количество элементов
+        Observable.just("p1", "p2", "p3", "p4").count().subscribe(s -> System.out.println("Emitted: " + s + " elements!"));
+
+
+        // all, exists, contains
+        Observable<Integer> numbers = Observable.range(1, 5);
+        numbers.all(x -> x != 4);           // [false]
+        numbers.exists(x -> x == 4);        // [true]
+        numbers.contains(4);                // [true]
 
 
     }
